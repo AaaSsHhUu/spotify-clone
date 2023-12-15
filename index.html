@@ -1,18 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Player - Music for you</title>
-    <link rel="icon" href="assets/logo.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/81c17048b7.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="container">
-        <div class="sidebar">sidebar</div>
-        <div class="main-content">main-content</div>
-        <div class="music-player">Player</div>
+      <div class="sidebar" id="sidebar">
+        <i class="fa-solid fa-xmark close" onclick="hideMenu()"></i>
+        <div class="nav">
+          <ul>
+            <li class="active">
+              <i class="fa-solid fa-house"></i><a href="#">Home</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-magnifying-glass"></i><a href="#">Search</a>
+            </li>
+          </ul>
+        </div>
+        <div class="library">
+          
+        </div>
+      </div>
+      <div class="main-content">
+        <i class="fa-solid fa-bars menu" onclick="showMenu()"></i>
+      </div>
+
+      <div class="music-player">Player</div>
     </div>
-</body>
+  </body>
 </html>
