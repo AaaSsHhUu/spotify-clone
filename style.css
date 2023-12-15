@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background: #000;
     display: flex;
@@ -13,8 +15,8 @@
 
 /* ----------- SIDEBAR --------------- */
 .sidebar{
-    min-height: 90%;
-    width: 330px;
+    height: 100%;;
+    width: 340px;
     background: #000;
     border-radius: 1rem;
     margin: 0.5rem 0.5rem;
@@ -28,13 +30,13 @@
 }
 .nav ul li{
     list-style: none;
-    padding: 1rem 0.5rem;
+    padding: 1rem;
     opacity: 0.7;
 }
 .nav ul li a{
     text-decoration: none;
     color: #fff;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 }
 .nav ul li i{
     color: #fff;
@@ -57,6 +59,93 @@
     font-size: 1.25rem;
     margin: 0.5rem 0;
     opacity: 0;
+}
+
+/* Library design */
+.library{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    background: #121212;
+    border-radius: 1rem;
+    padding: 0.5rem;
+}
+
+.library-heading{
+    display: flex;
+    width: 100%;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.5rem;
+}
+
+.library-logo{
+    display: flex;
+    opacity: 0.7;
+    align-items: baseline;
+    justify-content: space-around;
+}
+.library-logo:hover{
+    opacity: 1;
+}
+.library-logo img{
+    width: 24px;
+    margin: 0 0.5rem;
+    cursor: pointer;
+}
+
+.library-logo p{
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.library-icons{
+    display: flex;
+    cursor: pointer;
+}
+.library-icons i{
+    opacity: 0.7;
+    margin: 0 0.25rem;
+    font-size: 1.25rem;
+    color: #fff;
+}
+.library-icons i:hover{
+    opacity: 1;
+}
+
+.library-box{
+    background: #242424;
+    border-radius: 1rem;
+    padding: 1rem 1.5rem;
+    margin: 0.5rem;
+    width: 100%;
+}
+
+.library-box h3{
+    color: #fff;
+    font-size: 1.15rem;
+    margin: 0.5rem 0;
+    line-height: 2;
+}
+.library-box p{
+    color: #fff;
+    font-size: var(--text);
+    margin: 0.5rem 0;
+    line-height: 2;
+}
+.white{
+    background: #fff;
+    color: #000;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    padding: 0.75rem;
+    cursor: pointer;
+    margin: 0.5rem 0;
 }
 
 /* ---------- MAIN-CONTENT ------------ */
@@ -88,7 +177,7 @@
 @media (max-width : 950px){
     .sidebar{
         /* position: relative; */
-        left: -340px;
+        left: -350px;
         z-index: 5;
     }
     .close{

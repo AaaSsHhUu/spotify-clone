@@ -6,5 +6,5 @@ function showMenu(){
     sidebar.style.left = '0';
 }
 function hideMenu(){
-    sidebar.style.left = "-340px";
+    sidebar.style.left = "-350px";
 }
