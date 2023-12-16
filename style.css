@@ -20,7 +20,8 @@
     background: #000;
     border-radius: 1rem;
     margin: 0.5rem 0.5rem;
-    position: relative;
+    position: sticky;
+    top: 0;
     left: 0;
     transition: all 0.5s ease;
 }
@@ -70,7 +71,7 @@
     margin-top: 1rem;
     background: #121212;
     border-radius: 1rem;
-    padding: 0.5rem;
+    padding: 0.5rem 1rem;
 }
 
 .library-heading{
@@ -150,9 +151,11 @@
 
 /* ---------- MAIN-CONTENT ------------ */
 .main-content{
-    height: 100%;
+    /* height: 100%; */
     background: #141414;
     width: 100%;
+    margin: 0.5rem;
+    border-radius: 1rem;
 }
 .menu{
     color: #fff;
@@ -174,11 +177,11 @@
     width: 100%;
 }
 
-@media (max-width : 950px){
-    .sidebar{
-        /* position: relative; */
-        left: -350px;
-        z-index: 5;
+@media (width <= 500px){
+    .main-content{
+        position: absolute;
+        top: -9px;
+        left: -12px;
     }
     .close{
         opacity: 1;
@@ -186,9 +189,24 @@
     .menu{
         opacity: 1;
     }
-    .main-content{
-        position: absolute;
-        top: 0;
-        left: 0;
+    .sidebar{
+        position: relative;
+        z-index: 5;
+        height: 98vh;
+    }
+}
+
+@media (width > 500px) and (width <= 900px){
+    .sidebar{
+        height: 98vh;
+    }
+    .library-icons{
+        display: none;
+    }
+    .library-logo p{
+        font-size: 1.25rem;
+    }
+    .nav ul li a{
+        font-size: 1.25rem;
     }
 }
